@@ -24,9 +24,27 @@ public class TestSRTM3 {
 	ByteBuffer data = ByteBuffer.allocate(bytes.length);
 	data.put(bytes);
 	
-	System.out.println(bytesRead + " bytes read from " + file.toString());
+	String fileString = file.getName().substring(0, file.getName().indexOf("."));
 	
-	SRTM3 srtm = new SRTM3();
+	String latString = fileString.substring(0,3);
+	String lonString = fileString.substring(3,7);
+	int lat = Integer.parseInt(latString.substring(1));
+	int lon = Integer.parseInt(lonString.substring(1));
+	if(latString.startsWith("S")){
+	    lat*=-1;
+	}
+	if(lonString.startsWith("W")){
+	    lon*=-1;
+	}
+	
+	
+	System.out.println(lat+","+lon);
+	
+	System.out.println(bytesRead + " bytes read from " + fileString);
+	
+	
+	
+	SRTM3 srtm = new SRTM3(lat, lon);
 	long start = System.currentTimeMillis();
 	srtm.load(data);
 	System.out.println("Conversion took " + (System.currentTimeMillis()-start) + "ms");

@@ -19,6 +19,11 @@ public class SRTM3 {
     // SRTM is stored as signed 2 byte integers
     private short[] data;
     
+    public SRTM3(int lat, int lon){
+	this.lat = lat;
+	this.lon = lon;
+    }
+    
     public void load(ByteBuffer byteBuffer){
 	data = new short[ROWS * ROWS];
 	int currentValue = 0;
@@ -49,4 +54,6 @@ public class SRTM3 {
 	    }
 	}
     }
+    
+    
 }
