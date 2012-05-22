@@ -48,5 +48,7 @@ public class TestSRTM3 {
 	long start = System.currentTimeMillis();
 	srtm.load(data);
 	System.out.println("Conversion took " + (System.currentTimeMillis()-start) + "ms");
+	
+	System.out.println(srtm.getElevationAt(40.776, -89.50, SRTM3.Mode.NearestNeighbor));
     }
 }
