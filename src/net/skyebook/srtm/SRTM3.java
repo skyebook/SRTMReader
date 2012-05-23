@@ -15,8 +15,8 @@ public class SRTM3 {
 	LinearInterpolation
     }
     private static final int ROWS = 1201;
-    private double lat;
-    private double lon;
+    private int lat;
+    private int lon;
     // SRTM is stored as signed 2 byte integers
     private short[] data;
 
@@ -125,11 +125,11 @@ public class SRTM3 {
 	return data[(row * ROWS) + column];
     }
     
-    public double getLat(){
+    public int getLat(){
 	return lat;
     }
     
-    public double getLon(){
+    public int getLon(){
 	return lon;
     }
 }
