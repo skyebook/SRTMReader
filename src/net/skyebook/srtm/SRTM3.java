@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.skyebook.srtm;
 
 import java.nio.ByteBuffer;
@@ -127,5 +123,13 @@ public class SRTM3 {
 
 	System.out.println("Getting at " + column + "," + row);
 	return data[(row * ROWS) + column];
+    }
+    
+    public double getLat(){
+	return lat;
+    }
+    
+    public double getLon(){
+	return lon;
     }
 }
