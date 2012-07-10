@@ -119,6 +119,7 @@ public class SRTM3 {
 	    }
 	}
 	else if (mode.equals(Mode.LinearInterpolation)) {
+	    throw new IllegalArgumentException("Linear Interpolation not yet supported");
 	}
 
 	System.out.println("Getting at " + column + "," + row);

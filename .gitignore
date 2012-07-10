@@ -12,3 +12,7 @@ nbproject/private/private.xml
 build/classes/.netbeans_automatic_build
 
 nbproject/private/private.properties
+
+build/classes/net/skyebook/srtm/SRTMUtil.class
+
+build/classes/net/skyebook/srtm/SRTM3$Mode.class
